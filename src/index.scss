@@ -1,6 +1,6 @@
 /* Font */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 /* Variables */
 :root {
@@ -12,7 +12,6 @@
   --white-color: #fff;
   --green-color: #65a30d;
   --light-green-color: #84cc16;
-
 }
 
 /* Universal styles */
@@ -26,12 +25,15 @@
 
 /* Global styles */
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   background-color: var(--background-color);
 }
 
-input, button, select, textarea {
-  font-family: 'Inter', sans-serif;
+input,
+button,
+select,
+textarea {
+  font-family: "Inter", sans-serif;
 }
 
 ul {
@@ -43,7 +45,14 @@ img {
   width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p, i {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+i {
   color: var(--text-color);
   font-weight: 400;
 }
