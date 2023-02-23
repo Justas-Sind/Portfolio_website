@@ -8,8 +8,13 @@ import {
   FaTelegramPlane,
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
+import { useState } from "react";
 
 function SideMenu() {
+  const [sideBarOpen, setSideBarOpen] = useState(false);
+
+  console.log(sideBarOpen)
+
   return (
     <div className={styles.sideMenu}>
       <div className={styles.sideMenuContainer}>
@@ -81,16 +86,21 @@ function SideMenu() {
           <BsFacebook />
         </div>
         <div className={styles.hamburgerMenuContainer}>
-          <label className={styles.hamburgerMenu}>
-            <input type="checkbox" />
+          <label
+            className={styles.hamburgerMenu}
+            
+          >
+            <input type="checkbox" onClick={() => setSideBarOpen(!sideBarOpen)}/>
           </label>
-          <aside className={styles.sideBar}>
-            <nav>
-              <div>This</div>
-              <div>Is</div>
-              <div>The</div>
-            </nav>
-          </aside>
+          {sideBarOpen ? (
+            <aside className={styles.sideBar}>
+              <nav>
+                <div>This</div>
+                <div>Is</div>
+                <div>The</div>
+              </nav>
+            </aside>
+          ) : null}
         </div>
       </div>
     </div>
