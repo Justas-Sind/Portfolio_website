@@ -1,9 +1,13 @@
 .mainLayout {
   display: grid;
-  grid-template-rows: 60px auto;
+  grid-template-rows: var(--side-menu-width-height) auto;
 
   header {
     position: relative;
+  }
+
+  main {
+    padding: 2rem 2rem;
   }
 }
 
@@ -11,6 +15,6 @@
   .mainLayout {
     min-height: 100vh;
     grid-template-rows: auto;
-    grid-template-columns: 60px auto;
+    grid-template-columns: var(--side-menu-width-height) auto;
   }
 }

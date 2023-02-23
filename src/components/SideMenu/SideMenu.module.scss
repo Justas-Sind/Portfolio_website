@@ -1,3 +1,15 @@
+// Hamburger menu variables
+:root {
+  --bar-width: 2rem;
+  --bar-height: 0.2rem;
+  --hamburger-gap: 5px;
+  --foreground: var(--text-color);
+  --background: var(--active-color);
+  --animation-timing: 200ms ease-in-out;
+  --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+//
+
 .sideMenu {
   background: var(--nav-color);
   height: 100%;
@@ -5,7 +17,7 @@
 }
 
 .sideMenuContainer {
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   display: flex;
   align-items: center;
   height: 100%;
@@ -24,30 +36,149 @@
   }
 }
 
+.navLinksContainer {
+  display: none;
+}
+
+.activeNavLink {
+  color: var(--active-color) !important;
+}
+
 .socialIconsContainer {
+  display: none;
+}
+
+// Hamburger menu
+.hamburgerMenu {
+  --x-width: calc(var(--hamburger-height) * 1.41421356237);
   display: flex;
-  align-items: center;
-  color: var(--text-color);
+  flex-direction: column;
+  gap: var(--hamburger-gap);
+  width: max-content;
+  cursor: pointer;
+}
 
-  svg {
-    margin: 0 0 0 0.75rem;
+.hamburgerMenu:has(input:checked) {
+  --foreground: var(--active-color);
+}
 
-    &:hover {
-      color: var(--active-color);
-      cursor: pointer;
+.hamburgerMenu:has(input:focus-visible)::before,
+.hamburgerMenu:has(input:focus-visible)::after,
+.hamburgerMenu input:focus-visible {
+  border: 1px solid var(--background);
+  box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburgerMenu::before,
+.hamburgerMenu::after,
+.hamburgerMenu input {
+  content: "";
+  width: var(--bar-width);
+  height: var(--bar-height);
+  background-color: var(--foreground);
+  border-radius: 9999px;
+  transform-origin: left center;
+  transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
+}
+
+.hamburgerMenu input {
+  appearance: none;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  pointer-events: none;
+}
+
+.hamburgerMenu:has(input:checked)::before {
+  rotate: 45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / -2);
+}
+
+.hamburgerMenu:has(input:checked)::after {
+  rotate: -45deg;
+  width: var(--x-width);
+  translate: 0 calc(var(--bar-height) / 2);
+}
+
+.hamburgerMenu input:checked {
+  opacity: 0;
+  width: 0;
+}
+//
+
+@media screen and (min-width: 640px) {
+  .navLinksContainer {
+    display: block;
+
+    ul {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      li {
+        a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 0.6rem;
+          text-transform: uppercase;
+          color: var(--text-color);
+
+          svg {
+            font-size: 1.5rem;
+            margin-bottom: 0.15rem;
+          }
+
+          &:hover {
+            color: var(--active-color);
+            cursor: pointer;
+          }
+        }
+      }
     }
+  }
+
+  .socialIconsContainer {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+
+    svg {
+      margin: 0 0 0 0.75rem;
+
+      &:hover {
+        color: var(--active-color);
+        cursor: pointer;
+      }
+    }
+  }
+
+  .hamburgerMenuContainer {
+    display: none;
   }
 }
 
 @media screen and (min-width: 1024px) {
   .sideMenu {
     position: fixed;
-    width: 60px;
+    width: var(--side-menu-width-height);
+    height: 100%;
   }
 
   .sideMenuContainer {
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     flex-direction: column;
+  }
+
+  .navLinksContainer {
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
   }
 
   .socialIconsContainer {
