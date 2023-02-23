@@ -9,11 +9,11 @@ import {
 } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
+import useMountTransition from '../../hooks/useMountTransition'
 
 function SideMenu() {
-  const [sideBarOpen, setSideBarOpen] = useState(false);
-
-  console.log(sideBarOpen)
+  const [sideBarMount, setSideBarMount] = useState(false);
+  const hasTransitionedIn = useMountTransition(sideBarMount, 1000);
 
   return (
     <div className={styles.sideMenu}>
@@ -90,14 +90,14 @@ function SideMenu() {
             className={styles.hamburgerMenu}
             
           >
-            <input type="checkbox" onClick={() => setSideBarOpen(!sideBarOpen)}/>
+            <input type="checkbox" onClick={() => setSideBarMount(!sideBarMount)}/>
           </label>
-          {sideBarOpen ? (
-            <aside className={styles.sideBar}>
+          {(hasTransitionedIn || sideBarMount) ? (
+            <aside className={`${styles.sideBar} ${hasTransitionedIn && styles.in} ${sideBarMount && styles.visible}`}>
               <nav>
-                <div>This</div>
-                <div>Is</div>
-                <div>The</div>
+                <div>Thisssssssssss</div>
+                <div>Issssssss</div>
+                <div>Thessssssssss</div>
               </nav>
             </aside>
           ) : null}

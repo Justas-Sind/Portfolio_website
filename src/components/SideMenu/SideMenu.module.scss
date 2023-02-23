@@ -116,13 +116,14 @@
   background-color: var(--nav-color);
   color: var(--text-color);
   max-width: 10rem;
-  min-height: 100vh;
+  height: calc(100vh - var(--side-menu-width-height));
   position: fixed;
   left: 0;
   top: var(--side-menu-width-height);
+  box-shadow: inset 0 2px 4px var(--background-color);
 }
 
-.hamburgerMenu:has(input:checked) + .sideBar {
+.sideBar.in.visible {
   translate: 0;
 }
 //
