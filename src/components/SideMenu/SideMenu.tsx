@@ -7,7 +7,7 @@ import {
   FaHammer,
   FaTelegramPlane,
 } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import useMountTransition from '../../hooks/useMountTransition'
 
@@ -15,11 +15,13 @@ function SideMenu() {
   const [sideBarMount, setSideBarMount] = useState(false);
   const hasTransitionedIn = useMountTransition(sideBarMount, 1000);
 
+  const navigation = useNavigate();
+
   return (
     <div className={styles.sideMenu}>
       <div className={styles.sideMenuContainer}>
         <div className={styles.logoContainer}>
-          <img src="/logo_bright.webp" alt="logo" />
+          <img src="/logo_bright.webp" alt="logo" onClick={() => navigation('/')} />
         </div>
         <div className={styles.navLinksContainer}>
           <ul>
