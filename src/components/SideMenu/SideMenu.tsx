@@ -84,6 +84,13 @@ function SideMenu() {
           <label className={styles.hamburgerMenu}>
             <input type="checkbox" />
           </label>
+          <aside className={styles.sideBar}>
+            <nav>
+              <div>This</div>
+              <div>Is</div>
+              <div>The</div>
+            </nav>
+          </aside>
         </div>
       </div>
     </div>

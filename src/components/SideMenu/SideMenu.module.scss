@@ -11,8 +11,9 @@
 //
 
 .sideMenu {
+  position: fixed;
   background: var(--nav-color);
-  height: 100%;
+  height: var(--side-menu-width-height);
   width: 100%;
 }
 
@@ -107,6 +108,23 @@
   opacity: 0;
   width: 0;
 }
+
+.sideBar {
+  transition: translate var(--animation-timing);
+  translate: -100%;
+  padding: 0.5rem 1rem;
+  background-color: var(--nav-color);
+  color: var(--text-color);
+  max-width: 10rem;
+  min-height: 100vh;
+  position: fixed;
+  left: 0;
+  top: var(--side-menu-width-height);
+}
+
+.hamburgerMenu:has(input:checked) + .sideBar {
+  translate: 0;
+}
 //
 
 @media screen and (min-width: 640px) {
@@ -159,11 +177,11 @@
   .hamburgerMenuContainer {
     display: none;
   }
+  
 }
 
 @media screen and (min-width: 1024px) {
   .sideMenu {
-    position: fixed;
     width: var(--side-menu-width-height);
     height: 100%;
   }
