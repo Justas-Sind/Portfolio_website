@@ -1,6 +1,61 @@
-.navBar {
-  background: #181818;
-  width: 60px;
+.sideMenu {
+  background: var(--nav-color);
   height: 100%;
   width: 100%;
+}
+
+.sideMenuContainer {
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.logoContainer {
+  width: 40px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+}
+
+.socialIconsContainer {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+
+  svg {
+    margin: 0 0 0 0.75rem;
+
+    &:hover {
+      color: var(--active-color);
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .sideMenu {
+    position: fixed;
+    width: 60px;
+  }
+
+  .sideMenuContainer {
+    padding: 1rem 0;
+    flex-direction: column;
+  }
+
+  .socialIconsContainer {
+    flex-direction: column;
+    justify-content: center;
+
+    svg {
+      margin: 0.75rem 0 0 0;
+    }
+  }
 }
