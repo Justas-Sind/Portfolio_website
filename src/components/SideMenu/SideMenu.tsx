@@ -7,15 +7,13 @@ import NavLinksList from "./NavLinksList";
 
 function SideMenu() {
   const [sideBarMount, setSideBarMount] = useState(false);
-  const hasTransitionedIn = useMountTransition(sideBarMount, 1000);
+  const hasTransitionedIn = useMountTransition(sideBarMount, 500);
 
   const navigation = useNavigate();
 
   function handleSideBarClose() {
     setSideBarMount(false);
   }
-
-  console.log(sideBarMount);
 
   return (
     <div className={styles.sideMenu}>
