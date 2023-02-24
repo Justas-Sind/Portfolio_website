@@ -66,7 +66,12 @@ function SideMenu() {
               onChange={() => setSideBarMount(!sideBarMount)}
             />
           </label>
-          {sideBarMount ? <div className={styles.sideBarOverlay} onClick={() => handleSideBarClose()}></div> : null}
+          {sideBarMount ? (
+            <div
+              className={styles.sideBarOverlay}
+              onClick={() => handleSideBarClose()}
+            ></div>
+          ) : null}
           {hasTransitionedIn || sideBarMount ? (
             <aside
               className={`${styles.sideBar} ${hasTransitionedIn && styles.in} ${
@@ -79,6 +84,31 @@ function SideMenu() {
                   handleSideBarClose={handleSideBarClose}
                 />
               </nav>
+              <div className={styles.sideBarSocialIconsContainer}>
+                <ul>
+                  <li>
+                    <a href="https://github.com/Justas-Sind" target="_blank">
+                      <BsGithub />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.linkedin.com/in/justas-sindaravicius-b9208512a/"
+                      target="_blank"
+                    >
+                      <BsLinkedin />
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/profile.php?id=100008356927017"
+                      target="_blank"
+                    >
+                      <BsFacebook />
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </aside>
           ) : null}
         </div>
