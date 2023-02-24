@@ -9,7 +9,7 @@ import {
 } from "react-icons/fa";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useState } from "react";
-import useMountTransition from '../../hooks/useMountTransition'
+import useMountTransition from "../../hooks/useMountTransition";
 
 function SideMenu() {
   const [sideBarMount, setSideBarMount] = useState(false);
@@ -21,7 +21,11 @@ function SideMenu() {
     <div className={styles.sideMenu}>
       <div className={styles.sideMenuContainer}>
         <div className={styles.logoContainer}>
-          <img src="/logo_bright.webp" alt="logo" onClick={() => navigation('/')} />
+          <img
+            src="/logo_bright.webp"
+            alt="logo"
+            onClick={() => navigation("/")}
+          />
         </div>
         <div className={styles.navLinksContainer}>
           <ul>
@@ -83,19 +87,43 @@ function SideMenu() {
           </ul>
         </div>
         <div className={styles.socialIconsContainer}>
-          <BsGithub />
-          <BsLinkedin />
-          <BsFacebook />
+          <ul>
+            <li>
+              <a href="https://github.com/Justas-Sind" target="_blank">
+                <BsGithub />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/justas-sindaravicius-b9208512a/"
+                target="_blank"
+              >
+                <BsLinkedin />
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/profile.php?id=100008356927017"
+                target="_blank"
+              >
+                <BsFacebook />
+              </a>
+            </li>
+          </ul>
         </div>
         <div className={styles.hamburgerMenuContainer}>
-          <label
-            className={styles.hamburgerMenu}
-            
-          >
-            <input type="checkbox" onClick={() => setSideBarMount(!sideBarMount)}/>
+          <label className={styles.hamburgerMenu}>
+            <input
+              type="checkbox"
+              onClick={() => setSideBarMount(!sideBarMount)}
+            />
           </label>
-          {(hasTransitionedIn || sideBarMount) ? (
-            <aside className={`${styles.sideBar} ${hasTransitionedIn && styles.in} ${sideBarMount && styles.visible}`}>
+          {hasTransitionedIn || sideBarMount ? (
+            <aside
+              className={`${styles.sideBar} ${hasTransitionedIn && styles.in} ${
+                sideBarMount && styles.visible
+              }`}
+            >
               <nav>
                 <div>Thisssssssssss</div>
                 <div>Issssssss</div>

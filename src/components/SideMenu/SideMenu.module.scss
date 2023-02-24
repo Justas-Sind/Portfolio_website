@@ -90,13 +90,13 @@
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / -2);
   }
-  
+
   &:has(input:checked)::after {
     rotate: -45deg;
     width: var(--x-width);
     translate: 0 calc(var(--bar-height) / 2);
   }
-  
+
   input:checked {
     opacity: 0;
     width: 0;
@@ -154,16 +154,25 @@
   }
 
   .socialIconsContainer {
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
+    display: block;
 
-    svg {
-      margin: 0 0 0 0.75rem;
+    ul {
+      display: flex;
+      gap: 0.75rem;
 
-      &:hover {
-        color: var(--active-color);
-        cursor: pointer;
+      li {
+        height: 1rem;
+
+        a {
+          color: var(--text-color);
+
+          svg {
+            &:hover {
+              color: var(--active-color);
+              cursor: pointer;
+            }
+          }
+        }
       }
     }
   }
@@ -171,7 +180,6 @@
   .hamburgerMenuContainer {
     display: none;
   }
-  
 }
 
 @media screen and (min-width: 1024px) {
@@ -189,16 +197,13 @@
     ul {
       display: flex;
       flex-direction: column;
-      gap: 0.75rem;
     }
   }
 
   .socialIconsContainer {
-    flex-direction: column;
-    justify-content: center;
-
-    svg {
-      margin: 0.75rem 0 0 0;
+    ul {
+      flex-direction: column;
+      justify-content: center;
     }
   }
 }
