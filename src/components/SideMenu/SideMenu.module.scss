@@ -60,6 +60,7 @@
   gap: var(--hamburger-gap);
   width: max-content;
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
 
   &:has(input:checked) {
     --foreground: var(--active-color);
@@ -105,20 +106,58 @@
 
 .sideBar {
   transition: translate var(--animation-timing);
-  translate: -100%;
-  padding: 0.5rem 1rem;
+  translate: 100%;
+  padding: 1rem 1.5rem;
   background-color: var(--nav-color);
   color: var(--text-color);
   max-width: 10rem;
   height: calc(100vh - var(--side-menu-width-height));
   position: fixed;
-  left: 0;
+  right: 0;
   top: var(--side-menu-width-height);
   box-shadow: inset 0 2px 4px var(--background-color);
 }
 
+.sideBarOverlay {
+  position: fixed;
+  top: var(--side-menu-width-height);
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(2px);
+}
+
 .sideBar.in.visible {
   translate: 0;
+}
+
+.sideBarLinkContainer {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+        text-transform: capitalize;
+        color: var(--text-color);
+        -webkit-tap-highlight-color: transparent;
+
+        svg {
+          font-size: 2rem;
+        }
+
+        &:hover {
+          color: var(--active-color);
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 @media screen and (min-width: 640px) {

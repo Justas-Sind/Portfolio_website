@@ -1,21 +1,21 @@
 import styles from "./SideMenu.module.scss";
 import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
-import {
-  FaHome,
-  FaUser,
-  FaRegListAlt,
-  FaHammer,
-  FaTelegramPlane,
-} from "react-icons/fa";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import useMountTransition from "../../hooks/useMountTransition";
+import NavLinksList from "./NavLinksList";
 
 function SideMenu() {
   const [sideBarMount, setSideBarMount] = useState(false);
   const hasTransitionedIn = useMountTransition(sideBarMount, 1000);
 
   const navigation = useNavigate();
+
+  function handleSideBarClose() {
+    setSideBarMount(false);
+  }
+
+  console.log(sideBarMount);
 
   return (
     <div className={styles.sideMenu}>
@@ -28,63 +28,10 @@ function SideMenu() {
           />
         </div>
         <div className={styles.navLinksContainer}>
-          <ul>
-            <li>
-              <NavLink
-                to="/"
-                className={({ isActive }) =>
-                  isActive ? styles.activeNavLink : undefined
-                }
-              >
-                <FaHome />
-                home
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/about"
-                className={({ isActive }) =>
-                  isActive ? styles.activeNavLink : undefined
-                }
-              >
-                <FaUser />
-                about
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/resume"
-                className={({ isActive }) =>
-                  isActive ? styles.activeNavLink : undefined
-                }
-              >
-                <FaRegListAlt />
-                resume
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/works"
-                className={({ isActive }) =>
-                  isActive ? styles.activeNavLink : undefined
-                }
-              >
-                <FaHammer />
-                works
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="/contact"
-                className={({ isActive }) =>
-                  isActive ? styles.activeNavLink : undefined
-                }
-              >
-                <FaTelegramPlane />
-                contact
-              </NavLink>
-            </li>
-          </ul>
+          <NavLinksList
+            styles={styles.activeNavLink}
+            handleSideBarClose={handleSideBarClose}
+          />
         </div>
         <div className={styles.socialIconsContainer}>
           <ul>
@@ -115,19 +62,22 @@ function SideMenu() {
           <label className={styles.hamburgerMenu}>
             <input
               type="checkbox"
-              onClick={() => setSideBarMount(!sideBarMount)}
+              checked={sideBarMount}
+              onChange={() => setSideBarMount(!sideBarMount)}
             />
           </label>
+          {sideBarMount ? <div className={styles.sideBarOverlay} onClick={() => handleSideBarClose()}></div> : null}
           {hasTransitionedIn || sideBarMount ? (
             <aside
               className={`${styles.sideBar} ${hasTransitionedIn && styles.in} ${
                 sideBarMount && styles.visible
               }`}
             >
-              <nav>
-                <div>Thisssssssssss</div>
-                <div>Issssssss</div>
-                <div>Thessssssssss</div>
+              <nav className={styles.sideBarLinkContainer}>
+                <NavLinksList
+                  styles={styles.activeNavLink}
+                  handleSideBarClose={handleSideBarClose}
+                />
               </nav>
             </aside>
           ) : null}
