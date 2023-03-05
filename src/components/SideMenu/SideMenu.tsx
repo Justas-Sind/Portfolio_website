@@ -64,9 +64,11 @@ function SideMenu() {
               onChange={() => setSideBarMount(!sideBarMount)}
             />
           </label>
-          {sideBarMount ? (
+          {hasTransitionedIn || sideBarMount ? (
             <div
-              className={styles.sideBarOverlay}
+              className={`${styles.sideBarOverlay} ${
+                hasTransitionedIn && styles.in
+              } ${sideBarMount && styles.visible}`}
               onClick={() => handleSideBarClose()}
             ></div>
           ) : null}

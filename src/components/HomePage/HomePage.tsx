@@ -9,7 +9,6 @@ function HomePage() {
       animate={{ translateX: 0, opacity: 1, transition: { duration: 0.75 } }}
       exit={{ translateX: "110%", opacity: 0, transition: { duration: 0.25 } }}
     >
-      <img className={styles.imga} src="https://images.unsplash.com/photo-1529767203443-a617595c8825?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80" alt="" />
       <p>
         rtvhnjrkcle,;xdkd;swekjs;dwjkerf,dxv fcmd.n vfm, Lorem, ipsum dolor sit
         amet consectetur adipisicing elit. Deleniti natus rem et praesentium aut
