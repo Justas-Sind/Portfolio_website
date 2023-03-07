@@ -37,12 +37,12 @@ function NavLinksList({ styles, handleSideBarClose }: Props) {
       </li>
       <li>
         <NavLink
-          to="/resume"
+          to="/skills"
           className={({ isActive }) => (isActive ? styles : undefined)}
           onClick={() => handleSideBarClose()}
         >
           <FaRegListAlt />
-          resume
+          skills
         </NavLink>
       </li>
       <li>

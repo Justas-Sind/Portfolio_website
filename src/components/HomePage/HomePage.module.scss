@@ -58,17 +58,7 @@
   }
 }
 
-.profilePic {
-  width: 250px;
-  min-width: 200px;
-  border-radius: 50%;
-  box-shadow: 8px 8px 48px rgba(255, 255, 255, 0.217);
-  align-self: center;
-  transition: all 500ms;
-  &:hover {
-    transform: scale(1.1);
-  }
-}
+
 
 .aboutMeTxt {
   color: var(--text-color-darker);

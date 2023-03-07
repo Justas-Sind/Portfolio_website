@@ -9,7 +9,7 @@ function HomePage() {
     <motion.div
       className={styles.homePage}
       initial={{ translateX: "-100%", opacity: 0 }}
-      animate={{ translateX: 0, opacity: 1, transition: { duration: 0.75 } }}
+      animate={{ translateX: 0, opacity: 1, transition: { duration: 0.5 } }}
       exit={{ translateX: "110%", opacity: 0, transition: { duration: 0.25 } }}
     >
       <div className={styles.homePageContainer}>
@@ -17,9 +17,7 @@ function HomePage() {
           <p>Hi, my name is</p>
           <h1>Justas Sindaravičius.</h1>
         </div>
-        <div className={styles.profilePic}>
-          <img src="/profile_pic.webp" alt="profile picture" />
-        </div>
+
         <div className={styles.aboutMeTxt}>
           <p>
             I am a <span className={styles.mainColor}>front-end</span> developer
