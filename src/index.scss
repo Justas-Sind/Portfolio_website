@@ -2,13 +2,23 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+@font-face {
+  font-family: 'Roboto Flex';
+  src: url('/fonts/RobotoFlex.woff2') format('woff2-variations');
+  font-weight: 0 1000;
+  font-display: swap;
+}
+
 /* Variables */
 :root {
+  --main-color-1: #149ECA;
+  --main-color-2: #fbbf24;
   --background-color: #0b0f17;
   --background-color-lighter: #1f2937;
   --nav-color: #111827;
   --text-color: #d1d5db;
-  --gray-medium-color: #4b5563;
+  --text-color-darker: #9ca3af;
+  --text-color-lighter: #d1d5db;
   --white-color: #fff;
   --active-color: #f59e0b;
   --green-color: #65a30d;
@@ -64,21 +74,6 @@ i {
 a {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
-}
-
-h1 {
-  font-size: 1.75rem;
-  font-weight: 700;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
 }
 
 /* Global classes */
