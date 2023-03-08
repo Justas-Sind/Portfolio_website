@@ -2,9 +2,14 @@ import styles from "./HomePage.module.scss";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import helloImage from "../../assets/images/undraw_hello_re_3evm.svg";
+import PageButton from "../PageButton/PageButton";
 
 function HomePage() {
   const navigation = useNavigate();
+
+  function handleOnClick() {
+    navigation("/about");
+  }
 
   return (
     <motion.div
@@ -25,9 +30,7 @@ function HomePage() {
               with <span className={styles.mainColor}>React</span>.
             </p>
           </div>
-          <div className={styles.buttonContainer}>
-            <button onClick={() => navigation("/about")}>About me</button>
-          </div>
+          <PageButton handleOnClick={handleOnClick}>About me</PageButton>
         </div>
         <div className={styles.imgContainer}>
           <img src={helloImage} alt="pic" />

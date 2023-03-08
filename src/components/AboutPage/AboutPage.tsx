@@ -2,9 +2,14 @@ import styles from "./AboutPage.module.scss";
 import { motion } from "framer-motion";
 import profilePic from "../../assets/images/profile_pic.webp";
 import { useNavigate } from "react-router-dom";
+import PageButton from "../PageButton/PageButton";
 
 function AboutPage() {
   const navigation = useNavigate();
+
+  function handleOnClick() {
+    navigation("/skills");
+  }
 
   return (
     <motion.div
@@ -42,9 +47,7 @@ function AboutPage() {
                 industry.
               </p>
             </div>
-            <div className={styles.buttonContainer}>
-              <button onClick={() => navigation("/skills")}>My skills</button>
-            </div>
+            <PageButton handleOnClick={handleOnClick}>My skills</PageButton>
           </div>
           <div className={styles.imageContent}>
             <div className={styles.profileImageContainer}>
