@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import useMountTransition from "../../hooks/useMountTransition";
 import NavLinksList from "./NavLinksList";
+import logo from "../../assets/images/logo_bright.webp"
 
 function SideMenu() {
   const [sideBarMount, setSideBarMount] = useState(false);
@@ -20,7 +21,7 @@ function SideMenu() {
       <div className={styles.sideMenuContainer}>
         <div className={styles.logoContainer}>
           <img
-            src="/logo_bright.webp"
+            src={logo}
             alt="logo"
             onClick={() => navigation("/")}
           />

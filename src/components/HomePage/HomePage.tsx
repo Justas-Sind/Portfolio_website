@@ -1,6 +1,7 @@
 import styles from "./HomePage.module.scss";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
+import helloImage from "../../assets/images/undraw_hello_re_3evm.svg"
 
 function HomePage() {
   const navigation = useNavigate();
@@ -16,9 +17,6 @@ function HomePage() {
         <div className={styles.greetingTxt}>
           <p>Hi, my name is</p>
           <h1>Justas Sindaravičius.</h1>
-        </div>
-
-        <div className={styles.aboutMeTxt}>
           <p>
             I am a <span className={styles.mainColor}>front-end</span> developer
             passionate about creating visually appealing and user-friendly web
@@ -29,6 +27,10 @@ function HomePage() {
         <div className={styles.buttonContainer}>
           <button onClick={() => navigation("/about")}>About me</button>
         </div>
+        <div className={styles.imgContainer}>
+          <img src={helloImage} alt="pic" />
+        </div>
+        
       </div>
     </motion.div>
   );

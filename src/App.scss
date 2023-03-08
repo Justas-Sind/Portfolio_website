@@ -16,8 +16,13 @@
 @media screen and (min-width: 1024px) {
   .mainLayout {
     min-height: 100vh;
+    min-height: 100dvh;
     grid-template-rows: auto;
     grid-template-columns: var(--side-menu-width-height) auto;
+
+    main {
+      padding: 2.5rem 2.5rem;
+    }
   }
 }
 

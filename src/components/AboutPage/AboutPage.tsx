@@ -1,5 +1,6 @@
 import styles from "./AboutPage.module.scss";
 import { motion } from "framer-motion";
+import profilePic from "../../assets/images/profile_pic.webp"
 
 function AboutPage() {
   return (
@@ -32,7 +33,7 @@ function AboutPage() {
             </p>
           </div>
           <div className={styles.profilePic}>
-            <img src="/profile_pic.webp" alt="profile picture" />
+            <img src={profilePic} alt="profile picture" />
           </div>
         </div>
       </div>
