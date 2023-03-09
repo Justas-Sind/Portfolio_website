@@ -1,5 +1,6 @@
 import styles from "./ContactPage.module.scss";
 import { motion } from "framer-motion";
+import ContactForm from "../ContactForm/ContactForm";
 
 function ContactPage() {
   return (
@@ -14,7 +15,7 @@ function ContactPage() {
           <h2>get in touch</h2>
         </div>
         <div className={styles.contactContent}>
-
+          <ContactForm />
         </div>
       </div>
     </motion.div>
