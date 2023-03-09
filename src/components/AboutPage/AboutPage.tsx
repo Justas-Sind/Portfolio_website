@@ -23,7 +23,7 @@ function AboutPage() {
           <h2>about me</h2>
         </div>
         <div className={styles.aboutMeContent}>
-          <div className={styles.textContent}>
+          <div className={styles.textSection}>
             <div className={styles.textParagraphs}>
               <p>
                 Hi there! My name is{" "}

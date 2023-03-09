@@ -1,0 +1,132 @@
+.mainColor {
+  color: var(--main-color-1);
+}
+
+.skillsPage {
+  height: 100%;
+}
+
+.skillsPageContainer {
+  position: relative;
+  padding-top: 2rem;
+  height: 100%;
+}
+
+.pageNameContainer {
+  width: var(--container-size-verySmall);
+  margin: 0 auto;
+  h2 {
+    color: var(--active-color);
+    text-transform: capitalize;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+}
+
+.skillsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .skillsSection {
+    max-width: var(--container-size-verySmall);
+    .textContainer {
+      p {
+        color: var(--text-color-darker);
+        font-size: var(--font-size-small);
+        margin-bottom: 0.5rem;
+      }
+    }
+    .techContainer {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      & > p {
+        margin-bottom: 0.5rem;
+      }
+      .gridContainer {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+        grid-auto-rows: minmax(40px, 1fr);
+        gap: 0.5rem;
+        div {
+          display: grid;
+          place-items: center;
+          text-align: center;
+          border-radius: 0.5rem;
+          background-color: var(--main-color-2);
+          p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--background-color);
+            margin: 0.35rem 0.5rem;
+            cursor: default;
+          }
+        }
+      }
+    }
+  }
+  .imageContent {
+    display: flex;
+    justify-content: center;
+    .imgContainer {
+      margin-top: 2rem;
+      align-self: center;
+      transition: all 500ms;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .pageNameContainer {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .skillsPageContainer {
+    padding-top: 7rem;
+  }
+  .pageNameContainer {
+    width: 100%;
+    position: absolute;
+    top: 20vh;
+    h2 {
+      font-size: 2.5rem;
+    }
+  }
+
+  .skillsContent {
+    height: 100%;
+    flex-direction: row;
+    justify-content: flex-start;
+    .skillsSection {
+      max-width: var(--container-size-small);
+      .techContainer {
+        .gridContainer {
+          div {
+            transition: all 300ms;
+            &:hover {
+              transform: scale(0.95);
+            }
+          }
+        }
+      }
+    }
+    .imageContent {
+      flex-grow: 1;
+      margin-bottom: 5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .skillsPageContainer {
+    max-width: 1536px;
+    margin: 0 auto;
+  }
+}

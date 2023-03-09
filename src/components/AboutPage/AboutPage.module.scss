@@ -7,6 +7,7 @@
 }
 
 .aboutPageContainer {
+  position: relative;
   padding-top: 2rem;
   height: 100%;
 }
@@ -27,7 +28,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  .textContent {
+  .textSection {
     max-width: var(--container-size-verySmall);
     .textParagraphs {
       p {
@@ -62,29 +63,25 @@
       font-size: 2rem;
     }
   }
-  .aboutMeContent {
-    .aboutMeText {
-      p {
-        font-size: 1.25rem;
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 1024px) {
-  .pageNameContainer {
-    h2 {
-      font-size: 2.5rem;
-    }
+  .aboutPageContainer {
+    padding-top: 7rem;
   }
   .pageNameContainer {
     width: 100%;
+    position: absolute;
+    top: 20vh;
+    h2 {
+      font-size: 2.5rem;
+    }
   }
   .aboutMeContent {
     height: 100%;
     flex-direction: row;
     justify-content: flex-start;
-    .textContent {
+    .textSection {
       max-width: var(--container-size-small);
     }
     .imageContent {
