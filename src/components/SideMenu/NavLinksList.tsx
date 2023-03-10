@@ -1,11 +1,9 @@
 import { NavLink } from "react-router-dom";
-import {
-  FaHome,
-  FaUser,
-  FaRegListAlt,
-  FaHammer,
-  FaTelegramPlane,
-} from "react-icons/fa";
+import { ReactComponent as FaHome } from "../../assets/icons/FaHome.svg";
+import { ReactComponent as FaUser } from "../../assets/icons/FaUser.svg";
+import { ReactComponent as FaRegListAlt } from "../../assets/icons/FaRegListAlt.svg";
+import { ReactComponent as FaHammer } from "../../assets/icons/FaHammer.svg";
+import { ReactComponent as FaTelegramPlane } from "../../assets/icons/FaTelegramPlane.svg";
 
 interface Props {
   styles: string;

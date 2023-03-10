@@ -180,6 +180,12 @@
       a {
         color: var(--text-color);
         font-size: 1.75rem;
+        svg {
+          &:hover {
+            color: var(--active-color);
+            cursor: pointer;
+          }
+        }
       }
     }
   }

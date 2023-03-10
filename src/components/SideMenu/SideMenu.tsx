@@ -1,10 +1,12 @@
 import styles from "./SideMenu.module.scss";
-import { BsLinkedin, BsGithub, BsFacebook } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import useMountTransition from "../../hooks/useMountTransition";
 import NavLinksList from "./NavLinksList";
-import logo from "../../assets/images/logo_bright.webp"
+import logo from "../../assets/images/logo_bright.webp";
+import { ReactComponent as BsLinkedin } from "../../assets/icons/BsLinkedin.svg";
+import { ReactComponent as BsGithub } from "../../assets/icons/BsGithub.svg";
+import { ReactComponent as BsFacebook } from "../../assets/icons/BsFacebook.svg";
 
 function SideMenu() {
   const [sideBarMount, setSideBarMount] = useState(false);
