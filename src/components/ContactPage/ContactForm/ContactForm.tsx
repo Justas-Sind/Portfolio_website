@@ -8,9 +8,6 @@ const SERVICE_ID = import.meta.env.VITE_SERVICE_ID;
 const TEMPLATE_ID = import.meta.env.VITE_TEMPLATE_ID;
 const PUBLIC_KEY = import.meta.env.VITE_PUBLIC_KEY;
 
-console.log(SERVICE_ID);
-console.log(PUBLIC_KEY);
-
 const schema = z.object({
   name: z.string().min(1, { message: "Name is required" }),
   email: z

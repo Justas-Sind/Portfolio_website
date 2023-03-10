@@ -32,16 +32,9 @@
     h1 {
       font-size: 2rem;
       margin-bottom: 1rem;
-      letter-spacing: -1px;
-      font-family: "Roboto Flex";
-      font-variation-settings: "GRAD" 100, "XTRA" 500, "YTUC" 680, "YTLC" 514;
-      transition: all 500ms;
+      letter-spacing: -4px;
+      transition: all 300ms;
       color: var(--main-color-1);
-      &:hover,
-      &:focus {
-        font-variation-settings: "GRAD" 100, "XTRA" 500, "YTUC" 720,
-          "YTLC" 490;
-      }
     }
   }
 
