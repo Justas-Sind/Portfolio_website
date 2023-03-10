@@ -68,13 +68,10 @@
   .imageContent {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
     .imgContainer {
-      margin-top: 2rem;
       align-self: center;
-      transition: all 500ms;
-      &:hover {
-        transform: scale(1.1);
-      }
+      max-width: var(--container-size-verySmall);
     }
   }
 }
@@ -118,6 +115,8 @@
       }
     }
     .imageContent {
+
+      margin-top: 0;
       flex-grow: 1;
       margin-bottom: 5rem;
     }

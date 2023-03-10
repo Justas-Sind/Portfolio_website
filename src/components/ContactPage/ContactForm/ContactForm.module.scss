@@ -3,6 +3,9 @@
   grid-template: auto / 1fr;
   justify-items: center;
   gap: 1rem;
+  h3 {
+    justify-self: flex-start;
+  }
   & > div {
     position: relative;
     width: 100%;
@@ -50,6 +53,24 @@
     &:hover {
       color: var(--active-color);
       cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contactForm {
+    grid-template: auto / 1fr 1fr;
+    h3 {
+      grid-column: span 2;
+    }
+    div {
+      &:nth-child(4) {
+        grid-column: span 2;
+      }
+    }
+    button {
+      grid-column: span 2;
+      justify-self: flex-start;
     }
   }
 }
