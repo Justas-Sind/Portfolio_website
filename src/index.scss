@@ -23,6 +23,12 @@
   --container-size-verySmall: 480px;
   --container-size-small: 640px;
   --container-size-medium: 820px;
+
+  /* Toastify library colors */
+  --toastify-color-dark: var(--nav-color);
+  --toastify-text-color-dark: var(--text-color);
+  --toastify-color-success: var(--green-color);
+  --toastify-color-error: var(--red-color);
 }
 
 /* Universal styles */

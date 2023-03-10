@@ -8,6 +8,7 @@ import SkillsPage from "./components/ResumePage/SkillsPage";
 import WorksPage from "./components/WorksPage/WorksPage";
 import ContactPage from "./components/ContactPage/ContactPage";
 import { AnimatePresence } from "framer-motion";
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const location = useLocation();
@@ -28,6 +29,7 @@ function App() {
             <Route path="*" element={<NotFoundPage />} />
           </Routes>
         </AnimatePresence>
+        <ToastContainer />
       </main>
     </div>
   );
