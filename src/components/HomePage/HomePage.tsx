@@ -33,7 +33,7 @@ function HomePage() {
           <PageButton handleOnClick={handleOnClick}>About me</PageButton>
         </div>
         <div className={styles.imgContainer}>
-          <img src={helloImage} alt="greeting picture" />
+          <img src={helloImage} alt="greeting picture" draggable="false" />
         </div>
       </div>
     </motion.div>

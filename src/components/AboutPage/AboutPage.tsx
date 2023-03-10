@@ -51,7 +51,7 @@ function AboutPage() {
           </div>
           <div className={styles.imageContent}>
             <div className={styles.profileImageContainer}>
-              <img src={profilePic} alt="profile picture" />
+              <img src={profilePic} alt="profile picture" draggable="false" />
             </div>
           </div>
         </div>

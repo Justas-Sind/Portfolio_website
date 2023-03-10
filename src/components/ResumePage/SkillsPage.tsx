@@ -74,7 +74,7 @@ function SkillsPage() {
           </div>
           <div className={styles.imageContent}>
             <div className={styles.imgContainer}>
-              <img src={reactImage} alt="react picture" />
+              <img src={reactImage} alt="react picture" draggable="false" />
             </div>
           </div>
         </div>

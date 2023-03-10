@@ -28,9 +28,34 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  .contactSection {
+    max-width: var(--container-size-verySmall);
+    .contactInfoContainer {
+      background-color: var(--background-color-lighter);
+      padding: 0.5rem;
+      border-radius: 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      grid-auto-rows: minmax(40px, 1fr);
+      margin-bottom: 1rem;
+      p{
+        font-size: 0.85rem;
+      }
+    }
+  }
+  .imageContent {
+    display: flex;
+    justify-content: center;
+    .imgContainer {
+      margin-top: 2rem;
+      align-self: center;
+      transition: all 500ms;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
 }
-
-
 
 @media screen and (min-width: 640px) {
   .pageNameContainer {
@@ -57,6 +82,13 @@
     height: 100%;
     flex-direction: row;
     justify-content: flex-start;
+    .contactSection {
+      max-width: var(--container-size-small);
+    }
+    .imageContent {
+      flex-grow: 1;
+      margin-bottom: 5rem;
+    }
   }
 }
 
