@@ -3,7 +3,7 @@ import { ReactComponent as FaHome } from "../../assets/icons/FaHome.svg";
 import { ReactComponent as FaUser } from "../../assets/icons/FaUser.svg";
 import { ReactComponent as FaRegListAlt } from "../../assets/icons/FaRegListAlt.svg";
 import { ReactComponent as FaHammer } from "../../assets/icons/FaHammer.svg";
-import { ReactComponent as FaTelegramPlane } from "../../assets/icons/FaTelegramPlane.svg";
+import { ReactComponent as MdEmail } from "../../assets/icons/MdEmail.svg";
 
 interface Props {
   styles: string;
@@ -59,7 +59,7 @@ function NavLinksList({ styles, handleSideBarClose }: Props) {
           className={({ isActive }) => (isActive ? styles : undefined)}
           onClick={() => handleSideBarClose()}
         >
-          <FaTelegramPlane />
+          <MdEmail />
           contact
         </NavLink>
       </li>
