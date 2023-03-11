@@ -8,7 +8,7 @@ function NotFoundPage() {
       className={styles.notFoundPage}
       initial={{ translateX: "-100%", opacity: 0 }}
       animate={{ translateX: 0, opacity: 1, transition: { duration: 0.75 } }}
-      exit={{ translateX: "110%", opacity: 0, transition: { duration: 0.25 } }}
+      exit={{ opacity: 0, transition: { duration: 0.25 } }}
     >
       <div className={styles.notFoundPageContainer}>
         <div className={styles.notFoundPageContent}>
