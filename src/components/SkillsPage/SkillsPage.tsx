@@ -36,10 +36,7 @@ function SkillsPage() {
               </p>
             </div>
             <div className={styles.techContainer}>
-              <p>
-                Some of my <span className={styles.mainColor}>skills</span> and{" "}
-                <span className={styles.mainColor}>tech</span> I use:
-              </p>
+              <p>Some of my skills and tech I use:</p>
               <div className={styles.gridContainer}>
                 <div>
                   <p>HTML5</p>

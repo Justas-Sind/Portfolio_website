@@ -4,7 +4,7 @@ import HomePage from "./components/HomePage/HomePage";
 import SideMenu from "./components/SideMenu/SideMenu";
 import NotFoundPage from "./components/NotFoundPage/NotFoundPage";
 import AboutPage from "./components/AboutPage/AboutPage";
-import SkillsPage from "./components/ResumePage/SkillsPage";
+import SkillsPage from "./components/SkillsPage/SkillsPage";
 import WorksPage from "./components/WorksPage/WorksPage";
 import ContactPage from "./components/ContactPage/ContactPage";
 import { AnimatePresence } from "framer-motion";

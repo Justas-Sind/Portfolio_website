@@ -26,25 +26,34 @@ function AboutPage() {
           <div className={styles.textSection}>
             <div className={styles.textParagraphs}>
               <p>
-                Hi there! My name is{" "}
-                <span className={styles.mainColor}>Justas</span> and I am a
-                front-end developer based in{" "}
-                <span className={styles.mainColor}>Vilnius</span>. I am
-                passionate about creating beautiful, user-friendly websites.
+                Hello! My name is Justas and I am a passionate{" "}
+                <span className={styles.mainColor}>front-end developer</span>{" "}
+                with a solid foundation in{" "}
+                <span className={styles.mainColor}>HTML</span>,{" "}
+                <span className={styles.mainColor}>CSS</span> and{" "}
+                <span className={styles.mainColor}>JavaScript</span>. I am{" "}
+                <span className={styles.mainColor}>proficient in React</span>{" "}
+                and dedicated to mastering responsive, user-friendly design
+                principles. I am always eager to learn new technologies and stay
+                up-to-date with the latest trends in web development industry.
               </p>
               <p>
-                Apart from coding, I am also interested in{" "}
-                <span className={styles.mainColor}>design</span> and user
-                experience. I believe that a good website not only looks great,
-                but also functions smoothly and efficiently.
+                I have completed{" "}
+                <span className={styles.mainColor}>
+                  560 hours of front-end development course
+                </span>{" "}
+                in CodeAcademy, which equipped me with the skills and knowledge
+                to develop efficient, scalable and robust web applications.
+                Moreover, my experience as an{" "}
+                <span className={styles.mainColor}>IT project manager</span> has
+                given me valuable insights into the business aspect of web
+                development.
               </p>
               <p>
-                My main focus right now is on developing web applications using{" "}
-                <span className={styles.mainColor}>React</span>. I am always
-                eager to learn new technologies and stay up-to-date with the
-                latest trends in the{" "}
-                <span className={styles.mainColor}>web development</span>{" "}
-                industry.
+                I am excited about the possibilities that front-end development
+                offers and I am committed to delivering innovative and creative
+                solutions. Thank you for taking the time to visit my website and
+                learn more about me.
               </p>
             </div>
             <PageButton handleOnClick={handleOnClick}>My skills</PageButton>
