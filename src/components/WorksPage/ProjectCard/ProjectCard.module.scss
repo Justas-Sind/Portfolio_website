@@ -1,0 +1,47 @@
+.projectCard {
+  padding: 1rem 1rem 0.5rem 1rem;
+  background-color: var(--background-color-lighter);
+  border-radius: 0.5rem;
+  transition: var(--transition-time);
+  &:hover {
+    cursor: pointer;
+  }
+  &:hover .imgOverlay {
+    background-color: #f59f0b1e;
+    backdrop-filter: blur(1px);
+    opacity: 1;
+  }
+
+  &:hover .textContainer h3{
+    color: var(--active-color);
+  }
+}
+
+.imgContainer {
+  position: relative;
+}
+
+.imgOverlay {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  transition: var(--transition-time);
+  svg {
+    font-size: 3rem;
+    color: var(--active-color);
+  }
+}
+
+.textContainer {
+  text-align: center;
+  h3 {
+    transition: var(--transition-time);
+    font-size: 1.25rem;
+    margin: 1rem 0;
+  }
+}

@@ -16,7 +16,7 @@ function HomePage() {
       className={styles.homePage}
       initial={{ translateX: "-100%", opacity: 0 }}
       animate={{ translateX: 0, opacity: 1, transition: { duration: 0.5 } }}
-      exit={{ opacity: 0, transition: { duration: 0.25 } }}
+      exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.25 } }}
     >
       <div className={styles.homePageContainer}>
         <div className={styles.textContent}>

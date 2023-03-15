@@ -1,0 +1,126 @@
+.darkBG {
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 100vh;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.modalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: var(--container-size-verySmall);
+  max-height: 70vh;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  overflow-y: scroll;
+}
+
+.modal {
+  background: var(--background-color-lighter);
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.closeBtn {
+  cursor: pointer;
+  padding: 0.1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--active-color);
+  transition: var(--transition-time);
+  position: absolute;
+  right: 0.5rem;
+  top: 0.5rem;
+  align-self: flex-end;
+  line-height: 0;
+  opacity: 0.75;
+  svg {
+    font-size: 1.5rem;
+  }
+  &:hover {
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.04);
+    transform: scale(1.15);
+  }
+}
+
+.textContainer {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  h3 {
+    font-weight: 500;
+  }
+  .buttonsContainer {
+    display: flex;
+    gap: 0.5rem;
+
+    .linkButton {
+      cursor: pointer;
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      border-radius: 1rem;
+      font-size: 0.8rem;
+      border: none;
+      color: #fff;
+      background: var(--main-color-1);
+      transition: all 0.25s ease;
+
+      &:hover {
+        transform: translateY(-4px);
+        background: var(--active-color);
+      }
+    }
+  }
+  & > p {
+    color: var(--text-color-darker);
+  }
+  .techStack {
+    & > p {
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+      font-weight: 500;
+    }
+    .gridContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      grid-auto-rows: minmax(30px, 1fr);
+      gap: 0.5rem;
+      div {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        border-radius: 0.5rem;
+        padding: 0.25rem;
+        background-color: var(--main-color-2);
+        p {
+          font-size: 0.8rem;
+          font-weight: 600;
+          color: var(--background-color);
+          cursor: default;
+        }
+      }
+    }
+  }
+  .description {
+    background: var(--nav-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    p:first-child {
+      font-size: 1.05rem;
+      margin-bottom: 0.1rem;
+      font-weight: 500;
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .modalContainer {
+    max-width: var(--container-size-small);
+  }
+}

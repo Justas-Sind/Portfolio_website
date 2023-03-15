@@ -9,9 +9,7 @@ import WorksPage from "./components/WorksPage/WorksPage";
 import ContactPage from "./components/ContactPage/ContactPage";
 import { AnimatePresence } from "framer-motion";
 import { ToastContainer } from 'react-toastify';
-import { inject } from '@vercel/analytics';
- 
-inject();
+
 
 function App() {
   const location = useLocation();

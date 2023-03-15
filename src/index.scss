@@ -23,6 +23,9 @@
   --container-size-verySmall: 480px;
   --container-size-small: 640px;
   --container-size-medium: 820px;
+  --container-size-large: 1536px;
+
+  --transition-time: all 300ms;
 
   /* Toastify library colors */
   --toastify-color-dark: var(--nav-color);
@@ -81,4 +84,3 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Global classes */
