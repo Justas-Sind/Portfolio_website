@@ -2,18 +2,13 @@
   color: var(--text-color);
 }
 
-.aboutPage {
-  height: 100%;
-}
-
 .aboutPageContainer {
-  position: relative;
   padding-top: 2rem;
-  height: 100%;
+  max-width: var(--container-size-verySmall);
+  margin: 0 auto;
 }
 
 .pageNameContainer {
-  width: var(--container-size-verySmall);
   margin: 0 auto;
   transition: all 500ms;
   h2 {
@@ -27,10 +22,9 @@
 .aboutMeContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 2rem;
   .textSection {
-    max-width: var(--container-size-verySmall);
+    width: 100%;
     .textParagraphs {
       p {
         color: var(--text-color-darker);
@@ -42,8 +36,8 @@
   .imageContent {
     display: flex;
     justify-content: center;
+    flex-grow: 1;
     .profileImageContainer {
-      margin-top: 2rem;
       width: 80%;
       min-width: 200px;
       max-width: 300px;
@@ -68,41 +62,31 @@
 
 @media screen and (min-width: 1024px) {
   .aboutPageContainer {
-    padding-top: 7rem;
+    padding-top: 20vh;
+    max-width: var(--container-size-large);
   }
   .pageNameContainer {
-    width: 100%;
-    position: absolute;
-    top: 20vh;
     h2 {
       font-size: 2.5rem;
+      margin-bottom: 2rem;
     }
   }
   .aboutMeContent {
-    height: 100%;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: center;
     .textSection {
       max-width: var(--container-size-small);
     }
     .imageContent {
-      flex-grow: 1;
-      margin-bottom: 5rem;
+      .profileImageContainer {
+        margin-bottom: 3rem;
+      }
     }
   }
 }
 
-@media screen and (min-width: 1536px) {
-  .aboutPageContainer {
-    max-width: 1536px;
-    margin: 0 auto;
-  }
-
-}
-
 @media screen and (min-width: 1836px) {
   .pageNameContainer {
-    top: 25vh;
     h2 {
       font-size: 3rem;
     }

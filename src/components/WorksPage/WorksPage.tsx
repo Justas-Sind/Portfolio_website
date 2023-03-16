@@ -24,9 +24,9 @@ function WorksPage() {
         </div>
         <div className={styles.worksContent}>
           <div className={styles.worksGridContainer}>
-            {projectsData.map(project => 
+            {projectsData.map((project) => (
               <ProjectCard key={project.id} projectData={project} />
-              )}
+            ))}
           </div>
           <div className={styles.pageButton}>
             <PageButton handleOnClick={handleOnClick}>Contact</PageButton>

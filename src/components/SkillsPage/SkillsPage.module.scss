@@ -2,18 +2,13 @@
   color: var(--text-color);
 }
 
-.skillsPage {
-  height: 100%;
-}
-
 .skillsPageContainer {
-  position: relative;
   padding-top: 2rem;
-  height: 100%;
+  max-width: var(--container-size-verySmall);
+  margin: 0 auto;
 }
 
 .pageNameContainer {
-  width: var(--container-size-verySmall);
   margin: 0 auto;
   transition: all 500ms;
   h2 {
@@ -27,10 +22,8 @@
 .skillsContent {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  gap: 2rem;
   .skillsSection {
-    max-width: var(--container-size-verySmall);
     .textContainer {
       p {
         color: var(--text-color-darker);
@@ -69,10 +62,9 @@
   .imageContent {
     display: flex;
     justify-content: center;
-    margin-top: 2rem;
+    flex-grow: 1;
     .imgContainer {
-      align-self: center;
-      max-width: var(--container-size-verySmall);
+      max-width: 400px;
     }
   }
 }
@@ -87,21 +79,18 @@
 
 @media screen and (min-width: 1024px) {
   .skillsPageContainer {
-    padding-top: 7rem;
+    padding-top: 20vh;
+    max-width: var(--container-size-large);
   }
   .pageNameContainer {
-    width: 100%;
-    position: absolute;
-    top: 20vh;
     h2 {
       font-size: 2.5rem;
+      margin-bottom: 2rem;
     }
   }
-
   .skillsContent {
-    height: 100%;
     flex-direction: row;
-    justify-content: flex-start;
+    align-items: center;
     .skillsSection {
       max-width: var(--container-size-small);
       .techContainer {
@@ -116,24 +105,15 @@
       }
     }
     .imageContent {
-
-      margin-top: 0;
-      flex-grow: 1;
-      margin-bottom: 5rem;
+      .imgContainer {
+        max-width: 440px;
+      }
     }
-  }
-}
-
-@media screen and (min-width: 1536px) {
-  .skillsPageContainer {
-    max-width: 1536px;
-    margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 1836px) {
   .pageNameContainer {
-    top: 25vh;
     h2 {
       font-size: 3rem;
     }

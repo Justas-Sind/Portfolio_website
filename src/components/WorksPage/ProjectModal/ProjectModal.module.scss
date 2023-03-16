@@ -1,7 +1,7 @@
 .darkBG {
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   z-index: 10;
   top: 0;
   left: 0;
@@ -12,9 +12,9 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 100%;
+  width: 90%;
   max-width: var(--container-size-verySmall);
-  max-height: 70vh;
+  max-height: 70%;
   transform: translate(-50%, -50%);
   z-index: 20;
   overflow-y: scroll;
@@ -116,6 +116,12 @@
       margin-bottom: 0.1rem;
       font-weight: 500;
     }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .darkBG {
+    min-height: 100vh;
   }
 }
 

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const useMountTransition = (isMounted: boolean, unmountDelay: number) => {
   const [hasTransitionedIn, setHasTransitionedIn] = useState(false);
@@ -14,10 +14,10 @@ const useMountTransition = (isMounted: boolean, unmountDelay: number) => {
 
     return () => {
       clearTimeout(timeoutId);
-    }
+    };
   }, [unmountDelay, isMounted, hasTransitionedIn]);
 
   return hasTransitionedIn;
-}
+};
 
 export default useMountTransition;

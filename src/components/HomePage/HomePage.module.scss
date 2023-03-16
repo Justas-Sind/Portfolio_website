@@ -3,7 +3,6 @@
 }
 
 .homePage {
-  position: relative;
   height: 100%;
 }
 
@@ -37,20 +36,6 @@
       color: var(--main-color-1);
     }
   }
-
-  .buttonContainer {
-    margin: 1rem 0;
-    button {
-      background-color: var(--main-color-1);
-      padding: 0.75rem 1.5rem;
-      border-radius: 1.25rem;
-      font-weight: 500;
-      font-size: 1.25rem;
-      border: none;
-      color: var(--white-color);
-      transition: all 300ms;
-    }
-  }
 }
 
 .imgContainer {
@@ -59,7 +44,7 @@
 }
 
 @media screen and (min-width: 640px) {
-  .textContent{
+  .textContent {
     .mainContent {
       p {
         font-size: 1.5rem;
@@ -75,6 +60,8 @@
   .homePageContainer {
     flex-direction: row;
     justify-content: space-between;
+    max-width: 1536px;
+    margin: 0 auto;
   }
 
   .textContent {
@@ -83,7 +70,7 @@
         font-size: 4rem;
       }
     }
-  
+
     .buttonContainer {
       button {
         background-color: var(--main-color-1);
@@ -102,13 +89,7 @@
     }
   }
   .imgContainer {
+    margin-top: 0;
     max-width: var(--container-size-medium);
-  }
-}
-
-@media screen and (min-width: 1536px) {
-  .homePageContainer {
-    max-width: 1536px;
-    margin: 0 auto;
   }
 }
