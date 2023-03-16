@@ -25,13 +25,11 @@ function ProjectModal({ projectData, handleModalClose }: Props) {
         onClick={() => handleModalClose()}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.25 } }}
-        exit={{ opacity: 0, transition: { duration: 0.25 } }}
       />
       <motion.div
         className={styles.modalContainer}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, transition: { duration: 0.25 } }}
-        exit={{ opacity: 0, scale: 0.9, transition: { duration: 0.25 } }}
       >
         <div className={styles.modal}>
           <button

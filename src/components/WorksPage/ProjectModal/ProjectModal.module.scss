@@ -17,7 +17,14 @@
   max-height: 70%;
   transform: translate(-50%, -50%);
   z-index: 20;
-  overflow-y: scroll;
+  overflow-y: auto;
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: var(--text-color-darker); 
+    border-radius: 3px;
+  }
 }
 
 .modal {
