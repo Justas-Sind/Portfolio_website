@@ -54,7 +54,7 @@ function ProjectModal({ projectData, handleModalClose }: Props) {
                   </a>
                 </div>
                 <div>
-                  <a href={projectData.projectWebsite} target="_blank">
+                  <a href={projectData.githubLink} target="_blank">
                     <button className={styles.linkButton}>GitHub</button>
                   </a>
                 </div>
