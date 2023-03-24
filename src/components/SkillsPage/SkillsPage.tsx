@@ -57,6 +57,9 @@ function SkillsPage() {
                   <p>Sass</p>
                 </div>
                 <div>
+                  <p>Tailwind CSS</p>
+                </div>
+                <div>
                   <p>Git</p>
                 </div>
                 <div>

@@ -25,6 +25,18 @@ export const projectsData: ProjectData[] = [
   },
   {
     id: "2",
+    projectName: "Notes App",
+    projectWebsite: "https://notes-app-bice-theta.vercel.app/",
+    githubLink: "https://github.com/Justas-Sind/Notes_app",
+    projectType: "Hobby project",
+    techStack: ["TypeScript", "Tailwind CSS", "React"],
+    description:
+      "Web App for taking notes with tags, that can be created and customized. All information is saved to browser's local storage. This app was stylized with Tailwind CSS with Headless UI, a headless component library.",
+    projectScreenshot: "https://i.ibb.co/CzBjcpv/b76ae177-34c3-441f-bba9-8c89244716a1.webp",
+    date: "24/03/2023",
+  },
+  {
+    id: "3",
     projectName: "Boolandia game",
     projectWebsite: "https://boolandia.com/",
     githubLink: "https://github.com/Justas-Sind/Boolandia",
@@ -35,4 +47,5 @@ export const projectsData: ProjectData[] = [
     projectScreenshot: "https://i.ibb.co/XXGHkTW/boolandia-Game.webp",
     date: "15/02/2023",
   },
+
 ];
